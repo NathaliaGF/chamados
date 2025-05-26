@@ -1,0 +1,5 @@
+{
+  "name": "Visualizador de Chamados e Bloco de Notas Pessoal",
+  "description": "Uma aplicação para visualizar e gerenciar seus chamados pessoais, além de um bloco de notas integrado.",
+  "requestFramePermissions": []
+}

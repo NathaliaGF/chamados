@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualizador de Chamados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // or 'media' if you prefer system settings
+        theme: {
+          extend: {
+            colors: {
+              primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+            }
+          }
+        },
+        plugins: [
+          function({ addUtilities }) {
+            addUtilities({
+              '.custom-scrollbar': {
+                '&::-webkit-scrollbar': {
+                  width: '8px',
+                  height: '8px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  background: 'rgba(51, 65, 85, 0.5)', // slate-700 with opacity
+                  'border-radius': '10px',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  background: 'rgba(100, 116, 139, 0.7)', // slate-500 with opacity
+                  'border-radius': '10px',
+                },
+                '&::-webkit-scrollbar-thumb:hover': {
+                  background: 'rgba(148, 163, 184, 0.7)', // slate-400 with opacity
+                },
+              },
+               '.custom-scrollbar-thin': {
+                '&::-webkit-scrollbar': {
+                  width: '5px',
+                  height: '5px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  background: 'rgba(51, 65, 85, 0.3)', 
+                  'border-radius': '10px',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  background: 'rgba(100, 116, 139, 0.5)', 
+                  'border-radius': '10px',
+                },
+                '&::-webkit-scrollbar-thumb:hover': {
+                  background: 'rgba(148, 163, 184, 0.5)', 
+                },
+              }
+            })
+          }
+        ]
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@dnd-kit/core": "https://esm.sh/@dnd-kit/core@6.1.0",
+    "@dnd-kit/sortable": "https://esm.sh/@dnd-kit/sortable@8.0.0",
+    "@dnd-kit/utilities": "https://esm.sh/@dnd-kit/utilities@3.2.2",
+    "js-sha256": "https://esm.sh/js-sha256@0.11.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-slate-100 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
